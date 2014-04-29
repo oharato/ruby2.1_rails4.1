@@ -1,0 +1,59 @@
+    1  ls
+    2  cd /vagrant/
+    3  ls
+    4  sudo yum -y update
+    5  sudo yum -y install git gcc openssl-devel sqlite-devel gcc-c++ readline-devel postgresql-devel
+    6  cd ~
+    7  wget http://nodejs.org/dist/v0.10.26/node-v0.10.26.tar.gz
+    8  tar zxvf node-v0.10.26.tar.gz
+    9  cd node-v0.10.26
+   10  ./configure 
+   11  make
+   12  sudo make install
+   13  node -v
+   14  git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+   15  mkdir -p ~/.rbenv/plugins
+   16  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+   17  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+   18  echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+   19  source ~/.bash_profile
+   20  rbenv -list
+   21  rbenv install -list
+   22  rbenv install 2.1.1
+   23  rbenv global 2.1.1
+   24  gem update
+   25  gem update --system
+   26  ruby -vv
+   27  ruby -v
+   28  gem install rails --no-ri --no-rdoc -V
+   29  ls
+   30  cd /vagrant/
+   31  ls
+   32  rails -v
+   33  rbenv rehash
+   34  rails -v
+   35  rails new prac
+   36  cd prac/
+   37  ls
+   38  rails s
+   39  rails generate scaffold book isbn:string title:string price:integer publish:string published:date cd:boolean
+   40  rake db:migrate
+   41  rake db:fixtures:load FIXTURES:books
+   42  ls -al
+   43  cd ..
+   44  ls
+   45  ls -al
+   46  vi .gitignore
+   47  git status
+   48  git init
+   49  git status
+   50  git remote add github https://github.com/oharato/ruby2.1_rails4.1.git
+   51  git add .
+   52  git status
+   53  git commit -m "first commit"
+   54  git push -u github master
+   55  git remote set-url github https://oharato@github.com/oharato/ruby2.1_rails4.1.git
+   56  git push -u github master
+   57  git branch -a
+   58  ls
+   59  history > command.txt
